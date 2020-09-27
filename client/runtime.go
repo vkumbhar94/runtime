@@ -36,6 +36,8 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/runtime/logger"
 	"github.com/go-openapi/runtime/middleware"
+	"github.com/opentracing-contrib/go-stdlib/nethttp"
+	"github.com/opentracing/opentracing-go"
 )
 
 // TLSClientOptions to configure client authentication with mutual TLS
@@ -410,9 +412,12 @@ func (r *Runtime) Submit(operation *runtime.ClientOperation) (interface{}, error
 
 	var hasTimeout bool
 	pctx := operation.Context
+	var traceReq bool
 	if pctx == nil {
+		traceReq = false
 		pctx = r.Context
 	} else {
+		traceReq = true
 		hasTimeout = true
 	}
 	if pctx == nil {
@@ -432,6 +437,11 @@ func (r *Runtime) Submit(operation *runtime.ClientOperation) (interface{}, error
 		client = r.client
 	}
 	req = req.WithContext(ctx)
+	var ht *nethttp.Tracer
+	if traceReq {
+		req, ht = nethttp.TraceRequest(opentracing.GlobalTracer(), req)
+		defer ht.Finish()
+	}
 	res, err := client.Do(req) // make requests, by default follows 10 redirects before failing
 	if err != nil {
 		return nil, err
