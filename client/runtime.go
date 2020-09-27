@@ -33,9 +33,9 @@ import (
 
 	"github.com/go-openapi/strfmt"
 
-	"github.com/go-openapi/runtime"
-	"github.com/go-openapi/runtime/logger"
-	"github.com/go-openapi/runtime/middleware"
+	"github.com/vkumbhar94/runtime"
+	"github.com/vkumbhar94/runtime/logger"
+	"github.com/vkumbhar94/runtime/middleware"
 	"github.com/opentracing-contrib/go-stdlib/nethttp"
 	"github.com/opentracing/opentracing-go"
 )

@@ -22,7 +22,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/go-openapi/runtime"
+	"github.com/vkumbhar94/runtime"
 )
 
 func TestResponse(t *testing.T) {

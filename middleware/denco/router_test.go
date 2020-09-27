@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/go-openapi/runtime/middleware/denco"
+	"github.com/vkumbhar94/runtime/middleware/denco"
 )
 
 func routes() []denco.Record {

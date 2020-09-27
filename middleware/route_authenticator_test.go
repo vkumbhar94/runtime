@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/go-openapi/runtime"
+	"github.com/vkumbhar94/runtime"
 )
 
 type countAuthenticator struct {

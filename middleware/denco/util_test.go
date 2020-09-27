@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/go-openapi/runtime/middleware/denco"
+	"github.com/vkumbhar94/runtime/middleware/denco"
 )
 
 func TestNextSeparator(t *testing.T) {

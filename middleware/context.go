@@ -27,10 +27,10 @@ import (
 	"github.com/go-openapi/spec"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/go-openapi/runtime"
-	"github.com/go-openapi/runtime/logger"
-	"github.com/go-openapi/runtime/middleware/untyped"
-	"github.com/go-openapi/runtime/security"
+	"github.com/vkumbhar94/runtime"
+	"github.com/vkumbhar94/runtime/logger"
+	"github.com/vkumbhar94/runtime/middleware/untyped"
+	"github.com/vkumbhar94/runtime/security"
 )
 
 // Debug when true turns on verbose logging

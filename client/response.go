@@ -18,7 +18,7 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/go-openapi/runtime"
+	"github.com/vkumbhar94/runtime"
 )
 
 var _ runtime.ClientResponse = response{}

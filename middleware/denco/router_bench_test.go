@@ -7,7 +7,7 @@ import (
 	"math/big"
 	"testing"
 
-	"github.com/go-openapi/runtime/middleware/denco"
+	"github.com/vkumbhar94/runtime/middleware/denco"
 )
 
 func BenchmarkRouterLookupStatic100(b *testing.B) {
